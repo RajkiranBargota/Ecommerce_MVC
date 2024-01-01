@@ -15,7 +15,12 @@ namespace BulkyWeb_Razor.Pages.Categories
         }
         public void OnGet()
         {
-            CategoryList = new List<Category>();
+            CategoryList = _db.Categories.ToList();
+        }
+
+        public void Post()
+        {
+
         }
     }
 }
